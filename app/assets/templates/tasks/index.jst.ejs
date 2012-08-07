@@ -1,0 +1,13 @@
+<form id="new-task">
+  <input type="text" name="new-task-content" id="new-task-content" placeholder="What needs to be done?">
+</form>
+
+<hr>
+
+<% for (var i = 0, len = tasks.models.length; i < len; i++) { %>
+  <div class="task">
+    <span><%= tasks.models[i].get('content') %></span>&nbsp;&nbsp;&nbsp;
+    <span><a href="#" class="remove-task" id="<%= tasks.models[i].get('id') %>">Done/Remove</a></span>
+  </div>
+  <hr>
+<% } %>
